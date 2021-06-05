@@ -1,0 +1,318 @@
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+*/
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --visited-color: #05676e;
+  --active-color: #489c79;
+  --dark-grey: #2b2b2b;
+  --h2-size: 24px;
+  --h3-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+@media all and (max-width: 750px) {
+  h1 {
+    font-size: var(--h2-size);
+  }
+
+  h2 {
+    font-size: var(--h3-size);
+  }
+}
+
+a {
+  color: var(--primary-color);
+  transition: 0.2s color;
+}
+
+/* State order must be visited > hover > active */
+a:visited {
+  /* Visited link */
+  color: var(--visited-color);
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* Selected link */
+  color: var(--active-color);
+}
+
+button,
+.button {
+  /* Overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* Takes the font from the outer container */
+  font-family: inherit;
+  /* Styles the background color, font color, and text-decoration (underline, etc.) of the button */
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  /* Adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* Gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+.button:visited {
+  color: white;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus {
+  /* Lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.page-header__item {
+  flex: 0 1 160px;
+}
+
+.page-header__item:first-child {
+  width: 160px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Border X get width  */
+.navigation-list a:before, .navigation-list a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.navigation-list a:before {
+    left: 0px;
+    top: 0px;
+}
+
+.navigation-list a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.navigation-list a:visited:before, .navigation-list a:visited:after {
+    background: var(--visited-color);
+}
+
+.navigation-list a:hover:before, .navigation-list a:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.navigation-list a:active:before, .navigation-list a:active:after {
+    background: var(--active-color);
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-media__icon {
+  padding: 8px;
+}
+
+.grid {
+  padding: 0 10px;
+}
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+  padding: 10px;
+}
+
+.grid__item__img {
+  width: 100%;
+  max-width: 743px;
+  margin: 0 auto;
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .grid__item {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  @media all and (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+  }
+}
+
+.page-about {
+  text-align: center;
+}
+
+.about-table {
+  margin: 10px auto;
+}
+
+.about-table th,
+.about-table td {
+  padding: 5px;
+}
+
+/* SVG animation keyframes */
+@keyframes color-change {
+  0% {
+    fill: #fcffad;
+  }
+
+  50% {
+    fill: #edc655;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.berlin-illustration {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.sun {
+  animation: 8s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./img/wikipedia.ico">
+    <title>Alex Guizar - Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <!-- Add your logo here -->
+      <img src="img/alex.png" alt="Personal logo of Alex Guizar, a text logo in uppercase letters that consists of my name" class="page-header__item">
+
+      <nav class="page-header__item">
+        <ul role="menubar" class="navigation-list">
+          <li role="presentation">
+            <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+          </li>
+
+          <li role="presentation">
+            <a href="about.html" role="menuitem" class="navigation-list__item">About Me</a>
+          </li>
+
+          <li role="presentation">
+            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+          </li>
+
+          <li role="presentation">
+            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact</h1>
+
+      <div>
+        Tel <a href="tel:+18054410045">+1(805)441-0045</a><br>
+        Skype <a href="skype:live:alexguizar90">live:alexguizar90</a><br>
+        Email <a href="mailto:alexguizar90@gmail.com">alexguizar90@gmail.com</a>
+      </div>
+
+      <a href="mailto:alexguizar90@gmail.com">Contact me</a>
+
+      <form action="" method="post" id="contact-form">
+        <label class="standard-label" for="contact-email">E-mail: </label>
+        <input type="email" id="contact-email" required>
+
+        <label class="standard-label" for="contact-phone">Telephone: </label>
+        <input type="tel" id="contact-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+        <label class="standard-label" for="contact-message">Message: </label>
+        <textarea id="contact-message" maxlength="240" required></textarea>
+
+        <input type="submit" value="Send message">
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <p>Find me on</p>
+
+      <div class="social-media">
+        <!-- Github Icon -->
+        <a href="https://github.com/Alex-Guizar"><img src="img/github.svg" alt="Github" class="social-media__icon"></a>
+
+        <!-- Twitter Icon -->
+        <a href="https://twitter.com/alexguizar90"><img src="img/twitter.svg" alt="Twitter" class="social-media__icon"></a>
+
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/alexander-guizar-32649263/"><img src="img/linkedin.svg" alt="LinkedIn" class="social-media__icon"></a>
+      </div>
+    </footer>
+
+    <script src="js/tota11y.min.js"></script>
+  </body>
+</html>

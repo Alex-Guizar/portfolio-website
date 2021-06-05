@@ -1,0 +1,422 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
+Colors used
+
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (Purple): #357b70;
+Secondary Color (Orange): #e0b354;
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+@media all and (max-width: 750px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: #357b70;
+  -webkit-transition: 0.2s color;
+  -o-transition: 0.2s color;
+  transition: 0.2s color;
+}
+
+/* State order must be visited > hover > active */
+a:visited {
+  /* Visited link */
+  color: #05676e;
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* Selected link */
+  color: #489c79;
+}
+
+button {
+  /* Overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* Takes the font from the outer container */
+  font-family: inherit;
+  /* Styles the background color, font color, and text-decoration (underline, etc.) of the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /* Adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* Gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+.button {
+  /* Overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /* Takes the font from the outer container */
+  font-family: inherit;
+  /* Styles the background color, font color, and text-decoration (underline, etc.) of the button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  /* Adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* Gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+.button:visited {
+  color: white;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus {
+  /* Lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 160px;
+          flex: 0 1 160px;
+}
+
+.page-header__item:first-child {
+  width: 160px;
+}
+
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list a {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Border X get width  */
+.navigation-list a:before {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #357b70;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.navigation-list a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #357b70;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navigation-list a:before {
+    left: 0px;
+    top: 0px;
+}
+
+.navigation-list a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.navigation-list a:visited:before {
+    background: #05676e;
+}
+
+.navigation-list a:visited:after {
+    background: #05676e;
+}
+
+.navigation-list a:hover:before, .navigation-list a:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.navigation-list a:active:before {
+    background: #489c79;
+}
+
+.navigation-list a:active:after {
+    background: #489c79;
+}
+
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.social-media__icon {
+  padding: 8px;
+}
+
+.grid {
+  padding: 0 10px;
+}
+
+.grid__item {
+  display: inline-block;
+  width: 33%;
+  padding: 10px;
+}
+
+.grid__item__img {
+  width: 100%;
+  max-width: 743px;
+  margin: 0 auto;
+}
+
+@supports (display: grid) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .grid__item {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  @media all and (max-width: 500px) {
+    .grid {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media all and (min-width: 500px) and (max-width: 750px) {
+    .grid {
+      -ms-grid-columns: 1fr 20px 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (max-width: 750px) {
+    .grid {
+      grid-gap: 10px;
+    }
+  }
+}
+
+.page-about {
+  text-align: center;
+}
+
+.about-table {
+  margin: 10px auto;
+}
+
+.about-table th,
+.about-table td {
+  padding: 5px;
+}
+
+/* SVG animation keyframes */
+@-webkit-keyframes color-change {
+  0% {
+    fill: #fcffad;
+  }
+
+  50% {
+    fill: #edc655;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: #fcffad;
+  }
+
+  50% {
+    fill: #edc655;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+.berlin-illustration {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.sun {
+  -webkit-animation: 8s color-change infinite alternate linear;
+          animation: 8s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
+}
