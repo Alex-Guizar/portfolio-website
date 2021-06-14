@@ -181,7 +181,7 @@ button:hover, button:focus,
 }
 
 .navigation-list a:visited:before, .navigation-list a:visited:after {
-    background: var(--visited-color);
+    background-color: var(--visited-color);
 }
 
 .navigation-list a:hover:before, .navigation-list a:hover:after {
@@ -190,7 +190,7 @@ button:hover, button:focus,
 }
 
 .navigation-list a:active:before, .navigation-list a:active:after {
-    background: var(--active-color);
+    background-color: var(--active-color);
 }
 
 .page-footer {

@@ -237,11 +237,11 @@ button:hover, button:focus,
 }
 
 .navigation-list a:active:before {
-    background: #489c79;
+    background-color: #489c79;
 }
 
 .navigation-list a:active:after {
-    background: #489c79;
+    background-color: #489c79;
 }
 
 .page-footer {
