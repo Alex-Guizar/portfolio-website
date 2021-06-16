@@ -111,15 +111,31 @@ button:hover, button:focus,
 }
 
 .profile {
+  display: flex;
   max-width: 700px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
+.profile__item {
+  padding: 20px;
+}
+
 .profile__portrait {
-  float: left;
   width: 250px;
-  margin-right: 40px;
   border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile__portrait {
+    margin-right: 0;
+  }
 }
 
 .page-header {
