@@ -146,10 +146,11 @@ button:hover, button:focus,
 .navigation-list {
   list-style-type: none;
   margin: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navigation-list li {
-  display: inline-block;
   margin-left: 15px;
 }
 
@@ -191,6 +192,12 @@ button:hover, button:focus,
 
 .navigation-list a:active:before, .navigation-list a:active:after {
     background-color: var(--active-color);
+}
+
+@media (max-width:600px) {
+  .navigation-list {
+    flex-direction: column;
+  }
 }
 
 .page-footer {

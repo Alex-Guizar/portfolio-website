@@ -176,10 +176,15 @@ button:hover, button:focus,
 .navigation-list {
   list-style-type: none;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .navigation-list li {
-  display: inline-block;
   margin-left: 15px;
 }
 
@@ -224,11 +229,11 @@ button:hover, button:focus,
 }
 
 .navigation-list a:visited:before {
-    background: #05676e;
+    background-color: #05676e;
 }
 
 .navigation-list a:visited:after {
-    background: #05676e;
+    background-color: #05676e;
 }
 
 .navigation-list a:hover:before, .navigation-list a:hover:after {
@@ -242,6 +247,15 @@ button:hover, button:focus,
 
 .navigation-list a:active:after {
     background-color: #489c79;
+}
+
+@media (max-width:600px) {
+  .navigation-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .page-footer {
